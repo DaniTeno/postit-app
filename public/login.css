@@ -1,0 +1,133 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    border-radius: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    outline: none;
+    text-decoration: none;
+    color: #000;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: rgba(20, 19, 17, 0.945);
+    height: 2000px;
+}
+
+#form-container{
+    max-width: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 3rem auto;
+    background: linear-gradient(to bottom, rgba(44, 41, 22, 0.74), rgba(39, 36, 18, 0.493)) ; 
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.507);
+    padding: 1rem 0;
+    height: fit-content;
+}
+
+#form-container > nav{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    min-width: 700px;
+    height: 100%;
+    right: 0px;
+    transition: right ease .2s;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+form{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    padding: 1rem;
+    background-color: rgb(248, 255, 147);
+    border-radius: 8px;
+    border: 1px solid rgb(31, 31, 31);
+}
+
+.form-title{
+    font-size: 24px;
+    color: rgb(255, 253, 225);
+    margin: auto;
+    background: linear-gradient(to bottom, rgb(54, 50, 25), rgb(39, 36, 18)) ; 
+    border-radius: 3px;
+    border: 1px solid rgb(29, 29, 29);
+    width: fit-content;
+    padding: .3rem 1rem;
+}
+
+.form-input{
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 4px;
+    padding: .2rem .5rem;
+    transition: border .3s ease, background-color .3s ease;
+    margin-bottom: .5rem;
+}
+
+.form-input:hover{
+    border: 1px solid rgb(141, 141, 141);
+}
+
+.form-input:focus{
+    border: 1px solid rgb(107, 107, 107);
+    background-color: rgb(241, 241, 241);
+}
+
+.submit{
+    width: fit-content;
+    margin: auto;
+    padding: .2rem .5rem;
+}
+
+.submit:hover{
+    background-color: rgb(165, 252, 186);
+}
+
+.change-form{
+    font-size: 16px;
+    padding: .1rem;
+    transition: color .3s ease;
+    cursor: pointer;
+    width: fit-content;
+    margin: .2rem 0 0 auto;
+    color: rgb(80, 77, 70);
+    transition: color ease .3s;
+}
+.change-form:hover{
+    color: rgb(156, 113, 28);
+    text-decoration: underline;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.check{
+    position: absolute;
+    right: 4px;
+    top: 19px;
+    font-size: 24px;
+}
+
+.disabled{
+    background-color: rgb(185, 185, 185);
+    color: rgb(153, 153, 153);
+}
+.disabled:hover{
+    background-color: rgb(185, 185, 185);
+}

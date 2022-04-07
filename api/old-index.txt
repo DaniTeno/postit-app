@@ -1,0 +1,19 @@
+const express = require('express');
+const router = express.Router();
+const fs = require('fs');
+
+const PATH_ROUTES = __dirname;
+console.log('paht: ' + PATH_ROUTES);
+
+const removeExtension = (filename) => filename.split('.').shift();
+
+// IMPORTANTE: la carpeta route debe tener solo las rutas declaradas con sus respectivos endpoints porque sino lee un archivo (que obviamente no es una ruta) y al no estar configurado regresa un error de middleware. La función que crea las rutas es la de fs.readdirSync, lo que hace es leer todos los archivos que existen en la carpeta y de ahí genera los endpoints si es que están configurados.
+//Esto lo que hace es la generación dinamica de las rutas, pero se pueden añadir manualmente igual, una por una
+fs.readdirSync(PATH_ROUTES).filter((file) => {
+    const name = removeExtension(file); //posibles resultados: index, tracks, storage, users
+    if(name !== "index") {
+        router.use(`/${name}`, require(`./${file}`)); //posible resultado: localhost:5500/tracks
+    }  
+});
+
+module.exports = router;

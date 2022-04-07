@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./login.css">
+    <title>Log-in</title>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="titles">
+                <a href="/"><h1 id="page-title">Postit</h1></a>
+                <h3 id="user-title">Hi, guest!</h3>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="./users" id="log-btn">Login</a>
+                <a href="https://daniteno.000webhostapp.com/">Portfolio</a>
+            </nav>
+        </div>
+    </header>
+    <div id="form-container">
+        <nav style="right: 0px">
+            <form method="post" id="login">
+            <p class="form-title">Login</p>
+            <label for="user">Email </label>
+            <input class="form-input" type="email" name="email" id="user">
+            <label for="password">Password </label>
+            <input class="form-input" type="password" name="password" id="password">
+            <input type="submit" class="form-input submit" value="Enter" id="login-user" name="login">
+            <div class="change-form">Not registered?</div>
+            </form>
+            <form id="register">
+                <p class="form-title">Register</p>
+                <div id="email-container"  class="input-container">
+                    <label for="register-user">Email</label>
+                    <input class="form-input" type="email" name="email" id="register-email">
+                    <p class="check">&#9744;</p>
+                </div>
+                <div id="nickname-container" class="input-container">
+                    <label for="register-name">Nickname</label>
+                    <input class="form-input" type="text" name="nickname" id="register-name">
+                    <p class="check">&#9744;</p>
+                </div>
+                <div id="password-container" class="input-container">
+                    <label for="register-password">Password </label>
+                    <input class="form-input" type="password" name="password" id="register-password">
+                    <p class="check">&#9744;</p>
+                </div>
+                <div id="confirm-password-container" class="input-container">     
+                    <label for="confirm-password">Confirm your password</label>
+                    <input class="form-input" type="password" name="confirmPassword" id="confirm-password">
+                    <p class="check">&#9744;</p>
+                </div>
+                <input type="submit" class="form-input submit disabled" value="Sign up" id="register-user" name="register">
+                 <div class="change-form">Already registered?</div>
+            </form>
+        </nav>
+    </div>
+</body>
+<script src="./users.js" type="module"></script>
+</html>

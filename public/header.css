@@ -1,0 +1,91 @@
+header{
+    width: 100%;
+    background-color: rgb(253, 225, 99);
+    position: sticky;
+    height: fit-content;
+    top: 0;
+    z-index: 99;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.808);
+}
+
+.titles{
+    display: flex;
+    justify-content: center;
+}
+#page-title{
+    font-size: 45px;
+    transition: background-color ease .3s;
+    padding: .1rem .5rem;
+    height: fit-content;
+    border-radius: 6px;
+    transition: color ease .3s;
+    border: transparent 1px solid;
+    margin: .2rem 0;
+}
+#page-title:hover{
+    color: rgb(167, 61, 19);
+}
+#user-title{
+    color: rgb(146, 146, 146);
+    font-size: 16px;
+    align-self: baseline;
+    margin: auto;
+    margin-bottom: .4rem;
+    margin-left: 1rem;
+    width: fit-content;
+    padding: .3rem;
+}
+
+header > div{
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+    min-width: 350px;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+header > div > *{
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+header > div > h1{
+    font-size: 30px;
+}
+
+header > div > nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-between; 
+    min-width: fit-content;
+    max-width: 50%;
+}
+
+header > div > nav > a{
+    padding: .5rem 1rem;
+    font-size: 25px;
+    height: fit-content;
+    margin: auto 1rem;
+    border-radius: 6px;
+    transition: background-color ease .3s, border ease .3s;
+    border: transparent 1px solid;
+}
+header > div > nav > a:hover{
+    background-color: rgb(231, 186, 61);
+    border: 1px solid rgba(17, 17, 17, 0.199);
+}
+
+@media screen and (max-width: 500px) {
+    header{
+        width: 100%;
+    }
+    header > div > nav{
+        border-top: 2px solid rgba(17, 17, 17, 0.205);
+    }
+    header > div > nav > a{
+        font-size: 18px;
+        margin: 0;
+    }
+}

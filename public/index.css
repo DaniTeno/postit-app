@@ -1,0 +1,247 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    border-radius: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #000;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    background-color: rgba(20, 19, 17, 0.945);
+    min-width: 600px;
+}
+
+main{
+    display: flex;
+}
+
+aside{
+    width: fit-content;
+    min-height: 100vh;
+    min-width: 300px;
+    width: 20vw;
+    background: linear-gradient(to bottom, rgb(58, 53, 41), rgb(43, 39, 31));
+    border-right: 3px solid rgba(44, 33, 16, 0.733);
+    box-shadow: inset -1px -3px 5px rgba(2, 2, 2, 0.315);
+}
+
+.note-generator{
+    background-color: rgb(255, 253, 145);
+    margin: auto;
+    min-width: 300px;
+    border-bottom: 3px solid rgba(44, 33, 16, 0.733);
+    transition: box-shadow ease .2s, border-bottom ease .2s;
+}
+
+.note-generator:hover{
+    border-bottom: 3px solid rgba(32, 24, 12, 0.733);
+    box-shadow: 1px 2px 4px rgba(17, 17, 17, 0.418);
+}
+
+.post-wall{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(58, 28, 28), rgb(44, 17, 17));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
+#create-note{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#create-note textarea{
+    width: 80%;
+    min-height: 100px;
+    height: 100px;
+    overflow-x: hidden;
+    max-height: 300px;
+    padding: .4rem;
+    font-family: 'Century Gothic';
+    margin: .6rem auto;
+    resize: vertical;
+    background-color: rgb(188, 231, 231);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    transition: background-color ease .4s, border ease .4s;
+}
+#create-note textarea:hover{
+    border: 1px solid rgba(0, 0, 0, 0.705);
+}
+#create-note textarea:focus{
+    background-color: rgb(204, 252, 252);
+    border: 1px solid rgba(0, 0, 0, 0.705);
+}
+
+.note-title{
+    font-size: 1.3rem;
+    text-align: right;
+    padding: .2rem .6rem;
+    width: 100%;
+    color: rgb(14, 14, 14);
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.submit-note{
+    width: fit-content;
+    padding: .1rem .3rem;
+    border: 1px solid rgba(17, 17, 17, 0.384);
+    border-radius: 4px;
+    background-color: rgb(252, 252, 199);
+    margin: .5rem auto;
+    transition: background ease .3s, border ease .3s;
+}
+.submit-note:hover{
+    background-color: rgb(204, 250, 185);
+    border: 1px solid rgba(17, 17, 17, 0.651);
+}
+
+.posted-note, .user-note{
+    position: relative;
+    background-color: aqua;
+    max-width: 300px;
+    min-width: 200px;
+    height: 200px;
+    margin: .8rem;
+    border-radius: 2px 2px 10px 2px;
+    padding: .5rem;
+    overflow-x: hidden;
+}
+.user-note{
+    max-width: 200px;
+    border-radius: 2px;
+    min-height: 160px;
+    height: fit-content;
+}
+.user{
+    top: 0;
+    left: 0;
+    text-align: right;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.185);
+    position: absolute;
+    padding: .1rem .4rem;
+    height: 22px;
+}
+.content{
+    width: 100%;
+    position: relative;
+    top: 20px;
+    height: auto;
+    min-height: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.date{
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+    left: 0;
+    padding: .2rem;
+    color: rgb(78, 78, 78);
+}
+.user-note .content{
+    top: 20px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+    min-height: 100px;
+    margin-bottom: 1.5rem;
+}
+
+.user-note .buttons{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: rgb(104, 104, 104);
+    border-radius: 0 0 0 4px;
+    padding: .1rem;
+    width: fit-content;
+    z-index: 10;
+}
+.user-note button{
+    border: rgba(0, 0, 0, 0.425) 1px solid;
+    border-radius: 2px;
+    padding: .1rem .3rem;
+    margin: .1rem;
+    font-size: 12px;
+}
+.edit-note{
+    background-color: rgb(172, 211, 255);
+    transition: background-color ease .2s;
+}
+.edit-note:hover{
+    background-color: rgb(168, 162, 255);
+}
+.delete-note{
+    background-color: rgb(255, 171, 171);
+    transition: background-color ease .2s;
+}
+.delete-note:hover{
+    background-color: rgb(255, 115, 115);
+}
+
+.posted-section{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    min-width: 300px;
+}
+
+.posted-section > div{
+    background-color: rgb(105, 64, 53);
+    font-size: 45px;
+    height: fit-content;
+    text-align: center;
+    color: rgb(255, 212, 212);
+}
+
+.no-data{
+    margin: 2rem;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    text-align: center;
+}
+
+.text-l{
+    color: rgb(255, 206, 143);
+}
+.text-w{
+    color: rgb(223, 223, 223);
+}
+
+.disabled{
+    background-color: rgb(185, 185, 185);
+    color: rgb(153, 153, 153);
+}
+.disabled:hover{
+    background-color: rgb(185, 185, 185);
+}
+
+@media screen and (max-width: 500px) {
+    main{
+        flex-direction: column
+    }
+    body{
+        width: 100%;
+        min-width: 0;
+    }
+    aside{
+        min-height: 400px;
+        width: 100%;
+        border-right: none;
+    }
+    .posted-section{
+        width: 100%;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="header.css">
+        <title>Postit</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <div class="titles">
+                    <a href="/"><h1 id="page-title">Postit</h1></a>
+                    <h3 id="user-title">Hi, guest!</h3>
+                </div>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="./users" id="log-btn">Login</a>
+                    <a href="https://daniteno.000webhostapp.com/">Portfolio</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <div class="note-generator">
+                    <form id="create-note">
+                        <p class="note-title">Post a note</p>
+                        <textarea name="content" id="" cols="30" rows="10" name="create" id="create"></textarea>
+                        <input type="submit" name="send" class="submit-note" value="Post">
+                    </form>
+                </div>
+                <p class="note-title text-l">My posted notes</p>
+                <nav id="user-notes">
+                </nav>
+            </aside>
+            <section class="posted-section">
+                <div>Postit Wall</div>
+                <nav class="post-wall">
+                </nav>
+            </section>
+        </main>
+    </body>
+    <script src="./index.js" type="module"></script>
+</html>
